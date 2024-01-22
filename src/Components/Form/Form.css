@@ -1,0 +1,9 @@
+.selectContainer {
+  margin: 10px 0px;
+}
+.selectInput {
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  margin-left: 0;
+}
