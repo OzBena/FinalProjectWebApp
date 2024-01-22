@@ -1,0 +1,47 @@
+.popupContainer {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    /* Other styles... */
+  }
+  
+  .popupHeader {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px; /* Add padding if needed */
+  }
+  
+  .exitBtn {
+    /* Style your button as needed */
+    cursor: pointer;
+    border: none;
+    background: none;
+    /* Other styles... */
+  }
+  
+  .popupContent {
+    /* Styles for the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    /* Other styles... */
+  }
+  

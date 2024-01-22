@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react";
 import "./Form.css";
 import FormInput from "../FormInput/FormInput";
+import Model from "../Popup/Model";
 
 const Form = ({ setUserData }) => {
+  const [pop, setPop] = useState(false);
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -77,6 +79,7 @@ const Form = ({ setUserData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setPop(!pop)
     if (validityCheck()) {
       console.log(values);
       setUserData(values);
@@ -108,7 +111,7 @@ const Form = ({ setUserData }) => {
                     defaultValue=""
                   >
                     <option value="" disabled hidden>
-                        -- Gender --
+                      -- Gender --
                     </option>
                     {input.options.map((option) => (
                       <option key={option} value={option}>
@@ -132,6 +135,7 @@ const Form = ({ setUserData }) => {
         })}
 
         <button type="submit">Submit</button>
+        {pop ? <Model /> : null}
       </form>
     </div>
   );
