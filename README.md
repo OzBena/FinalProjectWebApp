@@ -1,4 +1,4 @@
-##Healping a friend with his final projact for his B.Sc. in industrial engineering and management
+## Healping a friend with his final projact for his B.Sc. in industrial engineering and management
 
 
 # Getting Started with Create React App
