@@ -1,0 +1,69 @@
+.ContestBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: x-large;
+}
+
+.btnDiv {
+  width: 70%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.contestBtn{
+    width: 500px;
+    height: 70px;
+    font-size: x-large;
+    border-radius: 18px;
+    background-color: #9DEDFF;
+}
+
+.contestBtn:hover{
+    cursor: pointer;
+}
+
+.detailsDiv {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+  }
+  
+
+.contestsMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headerDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: xxx-large;
+  margin-bottom: 10px;
+  color: #0500ff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contentDiv {
+  width:70%;
+  margin-bottom: 20px;
+  /* border: 2px solid black; */
+}
+
+.leaveBtn{
+  width: 100px;
+  height: 43px;
+  font-size: larger;
+  border-radius: 10px;
+}
+

@@ -1,0 +1,40 @@
+.WelcomMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: large;
+}
+
+.headerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: xxx-large;
+  margin-bottom: 10px;
+  color: #0500FF ;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.WcontentDiv{
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.contentDiv li{
+  margin-bottom: 10px;
+}
+
+.confirmationDiv {
+  padding: 0px 15px;
+}
+
+.approveBtn {
+  width: 100px;
+  height: 43px;
+  font-size: larger;
+  border-radius: 10px;
+}

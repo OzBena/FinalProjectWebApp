@@ -1,0 +1,118 @@
+.userEntitys {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  justify-content: center;
+  font-size: larger;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+
+.entity {
+  margin-right: 15px;
+  font-size: larger;
+  font-weight: 400;
+}
+
+.entity:hover {
+  cursor: pointer;
+  color: green;
+  text-decoration: underline;
+}
+
+.contestMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: xxx-large;
+  margin-bottom: 10px;
+  color: #0500ff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contentDiv {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.entitySubmitDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  font-size: x-large;
+}
+
+.prizeBtn {
+  width: 100px;
+  height: 70px;
+  background-color: #00ff10;
+  font-size: xx-large;
+  border-radius: 11px;
+  color: black;
+  border: 2px solid black;
+}
+
+.prizeBtn:hover{
+    cursor: default;
+}
+
+.contestDescriptionDiv {
+  width: 60%;
+}
+
+.formContainer label,
+.formContainer input {
+  margin-right: 45px;
+}
+
+.entityInput {
+  width: 200px;
+  height: 8px;
+}
+
+.entityInputBtn {
+  width: 80px;
+  height: 43px;
+  font-size: large;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #34fff3;
+}
+
+.goBackBtn {
+  width: 100px;
+  height: 43px;
+  font-size: larger;
+  border-radius: 10px;
+  /* background-color: #34fff3; */
+}
+
+.suggestedEntities{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: center;
+  font-size: larger;;
+}
+.suggestedEntities :nth-child(1){
+  margin-right: 30px;
+  font-size: xx-large;
+}
+
+.Sugentity{
+  margin-right: 15px;
+}

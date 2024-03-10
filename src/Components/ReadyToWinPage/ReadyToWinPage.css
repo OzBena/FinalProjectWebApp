@@ -1,0 +1,26 @@
+.readyToWinMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: large;
+}
+
+.headerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: xxx-large;
+  margin-bottom: 10px;
+  color: #0500ff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contentDiv{
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,30 @@
+.thankYouMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: large;
+}
+
+.TYheaderDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: xx-large;
+  margin-bottom: 10px;
+  color: #0500ff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.TYcontentDiv {
+  width: 100%;
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: larger;
+}

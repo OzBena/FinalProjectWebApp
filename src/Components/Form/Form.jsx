@@ -2,17 +2,16 @@ import React from "react";
 import { useState } from "react";
 import "./Form.css";
 import FormInput from "../FormInput/FormInput";
-import Model from "../Popup/Model";
 
-const Form = ({ setUserData }) => {
-  const [pop, setPop] = useState(false);
+const Form = ({ setStage }) => {
   const [values, setValues] = useState({
     username: "",
-    email: "",
+    workerID: "",
     gender: "",
-    password: "",
-    confirmPassword: "",
+    country: "",
+    city: "",
   });
+  const [errors, setErrors] = useState({});
 
   const inputs = [
     {
@@ -20,69 +19,65 @@ const Form = ({ setUserData }) => {
       name: "username",
       type: "text",
       placeholder: "Username",
-      label: "username",
+      label: "Username",
     },
     {
       id: 2,
-      name: "email",
+      name: "workerID",
       type: "text",
-      placeholder: "Email",
-      label: "email",
+      placeholder: "Worker ID",
+      label: "Worker ID",
     },
     {
       id: 3,
       name: "gender",
       type: "select",
-      options: ["Male", "Female", "Other"],
+      options: ["Male", "Female", "Other", "Rather not say"],
       label: "Gender",
     },
     {
       id: 4,
-      name: "password",
-      type: "password",
-      placeholder: "Password",
-      label: "Password",
+      name: "country",
+      type: "text",
+      placeholder: "Country",
+      label: "Country",
     },
     {
       id: 5,
-      name: "confirmPassword",
-      type: "password",
-      placeholder: "ConfirmPassword",
-      label: "ConfirmPassword",
+      name: "city",
+      type: "text",
+      placeholder: "City",
+      label: "City",
     },
   ];
 
   const validityCheck = () => {
-    let errorString = "Please enter:";
+    let newErrors = {};
     if (values.username.trim() === "") {
-      errorString += "\nusername ";
+      newErrors.username = true;
     }
-    if (values.email.trim() === "") {
-      errorString += "\nemail ";
+    if (values.workerID.trim() === "") {
+      newErrors.workerID = true;
     }
     if (values.gender.trim() === "") {
-      errorString += "\ngender ";
+      newErrors.gender = true;
     }
-    if (values.password.trim() === "") {
-      errorString += "\npassword ";
+    if (values.country.trim() === "") {
+      newErrors.country = true;
     }
-    if (values.confirmPassword.trim() === "") {
-      errorString += "\nconfirmPassword ";
+    if (values.city.trim() === "") {
+      newErrors.city = true;
     }
-    if (errorString === "Please enter:") {
-      return true;
-    } else {
-      console.log(errorString);
-      return false;
-    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPop(!pop)
+
     if (validityCheck()) {
-      console.log(values);
-      setUserData(values);
+      setStage(5);
     }
   };
 
@@ -91,9 +86,8 @@ const Form = ({ setUserData }) => {
   };
 
   return (
-    <div className="">
-      <h1>regisretion</h1>
-
+    <div className="formMainDiv">
+      <div className="headerDiv">Fill your Details</div>
       <form onSubmit={handleSubmit}>
         {inputs.map((input) => {
           if (input.type === "select") {
@@ -104,11 +98,12 @@ const Form = ({ setUserData }) => {
                 </div>
                 <div className="selectContainer">
                   <select
-                    className="selectInput"
+                    className={`selectInput ${
+                      errors[input.name] ? "error" : ""
+                    }`}
                     name={input.name}
                     value={values[input.name]}
                     onChange={onChange}
-                    defaultValue=""
                   >
                     <option value="" disabled hidden>
                       -- Gender --
@@ -126,6 +121,7 @@ const Form = ({ setUserData }) => {
             return (
               <FormInput
                 key={input.id}
+                className={`${errors[input.name] ? "error" : ""}`}
                 {...input}
                 value={values[input.name]}
                 onChange={onChange}
@@ -134,8 +130,7 @@ const Form = ({ setUserData }) => {
           }
         })}
 
-        <button type="submit">Submit</button>
-        {pop ? <Model /> : null}
+        <button className="sendBtn" type="submit">Send</button>
       </form>
     </div>
   );
