@@ -4,9 +4,9 @@ import './ReadyToWinPage.css'
 const ReadyToWinPage = (props) => {
   return (
     <div className="readyToWinMainDiv">
-      <div className="headerDiv"> Ready To Win?</div>
+      <div className="RTWheaderDiv"> Ready To Win?</div>
       
-      <div className="contentDiv">
+      <div className="RTWcontentDiv">
         <p>
           Welcome to our Crowdsourcing Naming Contests Platform. Here, you're
           invited to participate in contests designed to find unique names for
